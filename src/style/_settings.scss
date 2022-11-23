@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.global-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 500px;
+  width: 400px;
+  padding: 2rem;
+
+  .input-container {
+    position: absolute;
+    display: flex;
+    justify-content: right;
+    top: 2rem;
+    right: 2rem;
+
+    input {
+      all: unset;
+      width: 50%;
+      height: 50px;
+      padding: 0px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(5.5px);
+      -webkit-backdrop-filter: blur(5.5px);
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      font-weight: 500;
+
+      transition: 0.3s ease-in-out;
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+
+      &:focus {
+        width: 55%;
+        border: none;
+        font-size: 1.1rem;
+      }
+
+      &::placeholder {
+        color: #ffffff;
+        background: transparent url("../../public/assets/searchLogo.svg")
+          no-repeat left;
+        cursor: pointer;
+      }
+    }
+  }
+
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
